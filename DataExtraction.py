@@ -2,7 +2,7 @@
 """
 Created on Thu Jun 21 20:39:05 2018
 
-@author: Gajanan Thenge
+@author: hp-pc
 """
 
 import pandas as pd
@@ -52,11 +52,10 @@ with open(dest_file, 'a+') as f:
         num_bedrooms= num_bedrooms[0] if len(num_bedrooms)>0 else str(np.NaN)
         num_dining_room = num_dining_room[0] if len(num_dining_room)>0 else str(np.NaN)
         knights_house_dist= knights_house_dist[0]  if len(knights_house_dist)>0 else str(np.NaN)
+        in_front = in_front[0] if len(in_front)>0 else str(np.NaN)
+        kings_blessings = kings_blessings[0]  if len(kings_blessings)>0 else str(np.NaN)
+        holy_tree = holy_tree[0] if len(holy_tree)>0 else str(np.NaN)
         
-#         =  if len()>0 else np.NaN
-#         =  if len()>0 else np.NaN
-#         =  if len()>0 else np.NaN  
-         
         results = ','.join((house_ids,built_date,date_priced,dock_dist,cap_dist,royal_market_dist,guarding_tower,
-                            river,house_location,num_bedrooms,knights_house_dist))
+                            river,house_location,num_bedrooms,knights_house_dist,in_front,kings_blessings,holy_tree))
         f.write(results+'\n')
